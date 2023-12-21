@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merchandise Store</title>
+  <link rel = "stylesheet" href = "styles/merch.css">
+</head>
+<body>
+  <nav>
+    <a href="about-mars.html" style="text-decoration: none;">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span class="WMC">WMC</span>
+      </div>
+    </a>
+    <ul class="navbar-items">
+      <li><a href="about-mars.html">Mars</a></li>
+      <li><a href="past-missions.html">Past missions</a></li>
+      <li><a href="current-missions copy.html">Current missions</a></li>
+      <li><a href="#">Mangalyaan</a></li>
+      <li><a href="merch.html">Shop</a></li>
+      <li class="icon"><a href="login.html"><i class="fa-solid fa-user" style="color: white;"></i></a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <div class="cards">
+      <div class="card" id="ts-card" onclick="currentCard('ts')">
+        <div class="product-img">
+          <img src="images/ts1.png" id="tsimage">
+        </div>
+        <div class="product-detail" id="ts">
+          <h1>T-shirts</h1>
+
+          <div class="price"><p>&#8377 499</p></div>
+
+          <div class="variety" id="prod-var-1">
+            <a id="ts1" onclick="changeImage(1, 'ts', 'tsimage'); variety_val('ts', 1);" data-value="ts1"><div class="var-class" id="ts-var" style="background-color: rgb(255, 255, 255);"></div></a>
+            <a id="ts2" onclick="changeImage(2, 'ts', 'tsimage'); variety_val('ts', 2);" data-value="ts2"><div class="var-class" id="ts-var" style="background-color: rgb(255, 42, 0);"></div></a>
+            <a id="ts3" onclick="changeImage(3, 'ts', 'tsimage'); variety_val('ts', 3);" data-value="ts3"><div class="var-class" id="ts-var" style="background-color: rgb(6, 176, 6);"></div></a>
+            <a id="ts4" onclick="changeImage(4, 'ts', 'tsimage'); variety_val('ts', 4);" data-value="ts4"><div class="var-class" id="ts-var" style="background-color: rgb(47, 47, 47);"></div></a>
+            <a id="ts5" onclick="changeImage(5, 'ts', 'tsimage'); variety_val('ts', 5);" data-value="ts5"><div class="var-class" id="ts-var" style="background-color: rgb(42, 113, 183);"></div></a>
+          </div>
+
+          <div class="size" id="size">
+            <h3>Size:</h3>
+            <p onclick="size(1)" id="size1">S</p>
+            <p onclick="size(2)" id="size2">M</p>
+            <p onclick="size(3)" id="size3">L</p>
+            <p onclick="size(4)" id="size4">XL</p>
+          </div>
+
+          <div class="quantity">
+            <button id="decrease1">-</button>
+            <input type="number" id="count1" value="0">
+            <button id="increase1">+</button>
+          </div>
+
+          <button id="cart" onclick="addToCart(1)">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="card" id="p-card" onclick="currentCard('p')">
+        <div class="product-img">
+          <img src="images/p1.png" id="pimage">
+        </div>
+        <div class="product-detail" id="p">
+          <h1>Posters</h1>
+
+          <div class="price"><p>&#8377 249</p></div>
+
+          <div class="variety" id="prod-var-2">
+            <a id="p1" onclick="changeImage(1, 'p', 'pimage'); variety_val('p', 1);"><div class="var-class" style="background-image: url('images/p1.png'); background-position: center; background-size: 200%;"></div></a>
+            <a id="p2" onclick="changeImage(2, 'p', 'pimage'); variety_val('p', 2);"><div class="var-class" style="background-image: url('images/p2.png'); background-position: center; background-size: 200%;"></div></a>
+            <a id="p3" onclick="changeImage(3, 'p', 'pimage'); variety_val('p', 3);"><div class="var-class" style="background-image: url('images/p3.png'); background-position: center; background-size: 200%;"></div></a>
+            <a id="p4" onclick="changeImage(4, 'p', 'pimage'); variety_val('p', 4);"><div class="var-class" style="background-image: url('images/p4.png'); background-position: center; background-size: 200%;"></div></a>
+            <a id="p5" onclick="changeImage(5, 'p', 'pimage'); variety_val('p', 5);"><div class="var-class" style="background-image: url('images/p5.png'); background-position: center; background-size: 200%;"></div></a>
+          </div>
+          <div class="poster-size">
+            <h3>Size:</h3>
+            <p>18" X 24"</p>
+          </div>
+          <div class="quantity">
+            <button id="decrease2">-</button>
+            <input type="number" id="count2" value="0">
+            <button id="increase2">+</button>
+          </div>
+
+          <button id="cart" onclick="addToCart(2)">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="card" id="m-card" onclick="currentCard('m')">
+        <div class="product-img">
+          <img src="images/m1.png" id="mimage">
+        </div>
+        <div class="product-detail">
+          <h1>Mugs</h1>
+
+          <div class="price"><p>&#8377 399</p></div>
+
+          <div class="variety" id="prod-var-3">
+            <a id="m1" onclick="changeImage(1, 'm', 'mimage'); variety_val('m', 1);"><div class="var-class" style="background-image: url('images/mars-removebg-preview\(1\).png');background-position: center; background-size: 100%; background-repeat: no-repeat;"></div></a>
+            <a id="m2" onclick="changeImage(2, 'm', 'mimage'); variety_val('m', 2);"><div class="var-class" style="background-image: url('images/images.png'); background-position: center; background-size: 100%; background-repeat: no-repeat;"></div></a>
+            <a id="m3" onclick="changeImage(3, 'm', 'mimage'); variety_val('m', 3);"><div class="var-class" style="background-image: url('images/png-transparent-systems-engineering-sticker-nasa-technology-nasa-miscellaneous-blue-logo-thumbnail-removebg-preview.png'); background-position: center; background-size: 100%; background-repeat: no-repeat;"></div></a>
+            <a id="m4" onclick="changeImage(4, 'm', 'mimage'); variety_val('m', 4);"><div class="var-class" style="background-image: url('images/Indian_Space_Research_Organisation_Logo.svg.png'); background-position: center; background-size: 100%; background-repeat: no-repeat;"></div></a>
+            <a id="m5" onclick="changeImage(5, 'm', 'mimage'); variety_val('m', 5);"><div class="var-class" style="background-image: url('images/1280px-NASA_Worm_logo.svg.png'); background-position: center; background-size: 100%; background-repeat: no-repeat;"></div></a>
+          </div>
+
+          <div class="quantity" style="margin-top: 20px;">
+            <button id="decrease3">-</button>
+            <input type="number" id="count3" value="0">
+            <button id="increase3">+</button>
+          </div>
+
+          <button id="cart" style="margin-top: 65px;" onclick="addToCart(3)">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="card" id="g-card" onclick="currentCard('g')">
+        <div class="product-img">
+          <img src="images/g1.png" id="gimage">
+        </div>
+        <div class="product-detail">
+          <h1>MOVA Globe</h1>
+
+          <div class="price"><p>&#8377 7,499</p></div>
+
+          <div class="variety" id="prod-var-4">
+            <a id="g1" onclick="changeImage(1, 'g', 'gimage'); variety_val('g', 1);"><div class="var-class" style="background-image: url('images/g1.png'); background-position: center; background-size: 250%;"></div></a>
+            <a id="g2" onclick="changeImage(2, 'g', 'gimage'); variety_val('g', 2);"><div class="var-class" style="background-image: url('images/g2.png'); background-position: center; background-size: 250%;"></div></a>
+            <a id="g3" onclick="changeImage(3, 'g', 'gimage'); variety_val('g', 3);"><div class="var-class" style="background-image: url('images/g3.png'); background-position: center; background-size: 250%;"></div></a>
+          </div>
+
+          <div class="quantity" style="margin-top: 20px;">
+            <button id="decrease4">-</button>
+            <input type="number" id="count4" value="0">
+            <button id="increase4">+</button>
+          </div>
+
+          <button id="cart" style="margin-top: 65px;" onclick="addToCart(4)">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-box">
+    <p style="display: inline-block; font-size: 72px;">>>>>>>>>>>>></p>
+    <button class="cart" onclick="viewCart()">View Cart</button>
+    <p style="display: inline-block; font-size: 72px;"><<<<<<<<<<<<</p>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Whole Mars Catalouge. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+  function changeImage(fileId, cat, catId) {
+    var fileName = cat + fileId;
+    var imageDiv = document.getElementById(catId);
+    var imagePath = "images/" + fileName + ".png";
+    imageDiv.src = imagePath;
+  }
+
+  const decreaseBtn1 = document.getElementById('decrease1');
+  const increaseBtn1 = document.getElementById('increase1');
+  const countInput1 = document.getElementById('count1');
+
+  decreaseBtn1.addEventListener('click', () => {
+    let count = parseInt(countInput1.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput1.value = count;
+  });
+
+  increaseBtn1.addEventListener('click', () => {
+    let count = parseInt(countInput1.value);
+    count++;
+    countInput1.value = count;
+  });
+
+  countInput1.addEventListener('change', () => {
+    let count = parseInt(countInput1.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput1.value = count;
+  });
+
+  const decreaseBtn2 = document.getElementById('decrease2');
+  const increaseBtn2 = document.getElementById('increase2');
+  const countInput2 = document.getElementById('count2');
+
+  decreaseBtn2.addEventListener('click', () => {
+    let count = parseInt(countInput2.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput2.value = count;
+  });
+
+  increaseBtn2.addEventListener('click', () => {
+    let count = parseInt(countInput2.value);
+    count++;
+    countInput2.value = count;
+  });
+
+  countInput2.addEventListener('change', () => {
+    let count = parseInt(countInput2.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput2.value = count;
+  });
+
+  const decreaseBtn3 = document.getElementById('decrease3');
+  const increaseBtn3 = document.getElementById('increase3');
+  const countInput3 = document.getElementById('count3');
+
+  decreaseBtn3.addEventListener('click', () => {
+    let count = parseInt(countInput3.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput3.value = count;
+  });
+
+  increaseBtn3.addEventListener('click', () => {
+    let count = parseInt(countInput3.value);
+    count++;
+    countInput3.value = count;
+  });
+
+  countInput3.addEventListener('change', () => {
+    let count = parseInt(countInput3.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput3.value = count;
+  });
+
+  const decreaseBtn4 = document.getElementById('decrease4');
+  const increaseBtn4 = document.getElementById('increase4');
+  const countInput4 = document.getElementById('count4');
+
+  decreaseBtn4.addEventListener('click', () => {
+    let count = parseInt(countInput4.value);
+    if (count > 0) {
+      count--;
+    }
+    countInput4.value = count;
+  });
+
+  increaseBtn4.addEventListener('click', () => {
+    let count = parseInt(countInput4.value);
+    count++;
+    countInput4.value = count;
+  });
+
+  countInput4.addEventListener('change', () => {
+    let count = parseInt(countInput4.value);
+    if (isNaN(count)) {
+      count = 0;
+    }
+    countInput4.value = count;
+  });
+
+  function variety_val(prodId, index) {
+  var prod_var = document.querySelectorAll(`#${prodId+index} .var-class`);
+  if(prodId == "ts"){
+
+    var list = document.getElementById("prod-var-1").children;
+    console.log(list);
+    for (let i=0; i<list.length;i++){
+      if(list[i].id==prodId+index){
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1.5)";
+        }
+      }
+
+      else{
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1)";
+        }
+      }
+    }
+    return i+1;
+  }
+  else if(prodId == "p"){
+    var list = document.getElementById("prod-var-2").children;
+    console.log(list);
+    for (let i=0; i<list.length;i++){
+      if(list[i].id==prodId+index){
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1.5)";
+        }
+      }
+
+      else{
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1)";
+        }
+      }
+    }
+    return i+1;
+  }
+  else if (prodId == "m"){
+    var list = document.getElementById("prod-var-3").children;
+    console.log(list);
+    for (let i=0; i<list.length;i++){
+      if(list[i].id==prodId+index){
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1.5)";
+        }
+      }
+
+      else{
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1)";
+        }
+      }
+    }
+    return i+1;
+  }
+  else if (prodId == "g"){
+    var list = document.getElementById("prod-var-4").children;
+    console.log(list);
+    for (let i=0; i<list.length;i++){
+      if(list[i].id==prodId+index){
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1.5)";
+        }
+      }
+
+      else{
+        let d = list[i].getElementsByClassName("var-class");
+        for(let j=0;j<d.length;j++){
+          var d_in = d[j];
+          d_in.style.transform = "scale(1)";
+        }
+      }
+    }
+    return i+1;
+  }
+}
+
+function size(index){
+  var sizes = document.getElementById("size").children;
+  console.log(sizes);
+  for (let i=0; i<sizes.length;i++){
+    let current = sizes[i];
+    console.log(current.tagName);
+    if (current.tagName == 'P'){
+      let currentId = "size"+index;
+      if (current.id == currentId){
+        current.style.color = "#e77d11";
+        current.style.backGroundColor = "rgba(64, 64, 64, .3)";
+        current.style.borderRadius = "100%";
+      }
+
+      else{
+        current.style.color = "white";
+        current.style.backGroundColor = "rgba(32, 32, 32)";
+        current.style.borderRadius = "none";
+      }
+    }
+  }
+}
+
+function currentCard(prodId) {
+  var cards = document.getElementsByClassName("card");
+  for (let i = 0; i < cards.length; i++) {
+    var card = cards[i];
+    if (card.id == prodId + '-card') {
+      card.classList.add("active");
+    } else {
+      card.classList.remove("active");
+    }
+  }
+}
+
+let cart = [];
+    
+    function addToCart(index) {
+      const quantityInput = document.getElementById("count"+index);
+      const quantity = parseInt(quantityInput.value);
+
+      if (index == 1){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "T-shirt", price: 499 });
+        console.log("tshirts");
+       }
+      }
+
+      if (index == 2){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "Poster", price: 249 });
+        console.log("posters");
+       }
+      }
+
+      if (index == 3){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "Mug", price: 399 });
+        console.log("mugs");
+       }
+      }
+
+      if (index == 4){
+        for (let i = 0; i < quantity; i++) {
+        cart.push({ name: "MOVA Globe", price: 7499 });
+        console.log("mova");
+       }
+      }
+
+      quantityInput.value = 1;
+      console.log(quantity + " item(s) added to the cart.");
+    }
+
+    function viewCart() {
+      const cartItemsDiv = document.getElementById("cartItems");
+      cartItemsDiv.innerHTML = ""; // Clear previous cart items
+
+      if (cart.length === 0) {
+        cartItemsDiv.style.display = "none";
+        alert("Cart is empty.");
+      } else {
+        let itemsHtml = "<h2>Cart Items</h2>";
+        let totalPrice = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+          const item = cart[i];
+          const itemId = "item_" + i;
+
+          itemsHtml += `<div id="${itemId}" class="cartItem">`;
+          itemsHtml += `<p>&#9654 ${item.name} (&#8377;${item.price.toFixed(2)})</p>`;
+          itemsHtml += `<button class="deleteBtn" onclick="removeFromCart('${itemId}')">&times;</button>`;
+          itemsHtml += "</div>";
+
+          totalPrice += item.price;
+        }
+
+        itemsHtml += "<p>Total items: " + cart.length + "</p>";
+        itemsHtml += "<p>Total price: &#8377;" + totalPrice.toFixed(2) + "</p>";
+        itemsHtml += `<button class="checkoutBtn" onclick="checkout()">Checkout</button>`;
+
+        cartItemsDiv.innerHTML = itemsHtml;
+        cartItemsDiv.style.display = "block";
+      }
+    }
+
+    function removeFromCart(itemId) {
+      const itemIndex = parseInt(itemId.split("_")[1]);
+      cart.splice(itemIndex, 1);
+      viewCart();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Cannot checkout. Cart emptied.");
+      } else {
+        alert("Checkout successful!");
+        cart = []; // Clear the cart
+        viewCart(); // Update the cart display
+      }
+    }
+
+</script>
+<script src="https://kit.fontawesome.com/fa21158c25.js" crossorigin="anonymous"></script>
+</html>

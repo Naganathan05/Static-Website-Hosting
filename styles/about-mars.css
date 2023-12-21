@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: rgb(32, 32, 32);
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; 
+  background-color: rgb(17, 17, 17);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  border-radius: 2px;
+  box-shadow: 0px 1px 10px #000000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span{
+  color: white;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.WMC{
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-items li {
+  margin-right: 25px;
+}
+
+.navbar-items li:last-child {
+  margin-right: 20px;
+}
+
+.navbar-items li a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(225, 225, 225);
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.navbar-items li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: #e77d11;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-items li a:hover:before {
+  transform: scaleX(1);
+}
+
+.navbar-items li a:hover {
+  color: #e77d11;
+}
+
+
+.icon {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.icon i{
+  font-size: 18px;
+}
+
+.icon i:hover{
+  color: #e77d11;
+}
+
+.intro-section {
+  margin-top: 50px;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7)), url("../images/backgrounds/mars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.intro-section .content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.intro-section h1{
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  margin: 0px;
+}
+
+.intro-section h4{
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  margin: 0px;
+}
+
+.intro-section h1 span{
+  color: #e77d11;
+}
+
+.intro-section img{
+  margin-left: 250px;
+  height: 80px;
+  margin-top: 70px;
+}
+
+.about-us{
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  width: 60%;
+  margin-left: 13%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border: 2px solid #fff;
+}
+
+.mars-content-left{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.75)),  url("../images/backgrounds/7862bb3aa69a428d80f87bf208beb43e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  color: white;
+  border: 5px solid white;
+  transition: .2s;
+}
+
+.mars-content-right{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75),
+  rgba(0, 0, 0, 0.75)),  url("../images/backgrounds/7862bb3aa69a428d80f87bf208beb43e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  color: white;
+  border: 5px solid white;
+  transition: .2s;
+}
+
+.mars-content-left:hover{
+  transform: scale(.97);
+  filter: brightness(1.15);
+}
+
+.mars-content-right:hover{
+  transform: scale(.97);
+  filter: brightness(1.15);
+}
+
+.mars-img-left{
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  transform: translate(-130px, -95px);
+  box-shadow: 5px 0px 30px 10px rgb(0, 0, 0);
+  border: 30px solid #e77c1146;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.mars-img-right{
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  transform: translate(-20px, -120px);
+  box-shadow: -5px 0px 30px 10px rgb(0, 0, 0);
+  border: 30px solid #e77c1146;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+
+.mars-img-right img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+.mars-text-left{
+  padding-right: 150px;
+  margin-left: 20px;
+}
+
+.mars-text-right{
+  padding-left: 150px;
+  margin-right: 20px;
+}
+
+.mars-text-left h1, .mars-text-right h1{
+  font-size: 42px;
+}
+
+.mars-text-left p, .mars-text-right p{
+  font-size: 18px;
+}
+
+.mars-img-left:hover {
+  filter: brightness(.75);
+}
+
+.mars-img-right:hover {
+  filter: brightness(.75);
+}
+
+.mars-img-left:hover::before,
+.mars-img-left:active::before {
+  opacity: 1;
+}
+
+.mars-img-left::before {
+  content: 'Know more';
+  position: absolute;
+  font-size: 32px;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.mars-img-right:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.mars-img-right::before {
+  content: 'Know more';
+  position: absolute;
+  font-size: 32px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #1b1b1b;
+  padding: 20px 0;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: #e77d11;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+}

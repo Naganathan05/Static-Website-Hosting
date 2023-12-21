@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;400;500;700&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Chivo Mono', monospace;
+  scroll-behavior: smooth;
+}
+
+html{
+  overflow: hidden;
+}
+
+body{
+  height: 100vh;
+  background-image: url("../images/bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.login-frame{
+  display: flex;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgb(255,255,255);
+  border-radius: 2px;
+  box-shadow: 0px 0px 100px rgba(255, 255, 255, .75);
+}
+
+.form-frame{
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(18%);
+}
+
+.buttons{
+  margin-left: 75px;
+  margin-top: 20px;
+}
+
+form{
+  width: 500px;
+  height: 500px;
+}
+
+input[type=text], select{
+  position: relative;
+  width: 70%;
+  display: block;
+  height: 20px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+  background: none;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  font-stretch: expanded;
+}
+
+input[type=submit]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  margin-right: 50px;
+  font-size: 16px;
+}
+
+::placeholder{
+  color: rgb(57, 57, 57);
+}
+
+.button{
+  border-radius: 36px;
+  transition: .2s;
+  border: 2px solid black;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+}
+
+.button:active{
+  opacity: 50%;
+}
+
+.form-frame h1{
+  position: relative;
+  align-items: center;
+  transform: translateX(30%);
+  margin-bottom: 100px;
+}

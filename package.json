@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1523.0",
+    "recursive-readdir": "^2.2.3",
+    "s3-upload-stream": "^1.0.7"
+  }
+}

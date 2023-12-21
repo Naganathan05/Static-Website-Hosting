@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current-missions</title>
+  <link rel = "stylesheet" href = "styles/current-missions.css">
+</head>
+<body>
+  <nav>
+    <a href="about-mars.html" style="text-decoration: none;">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span class="WMC">WMC</span>
+      </div>
+    </a>
+    <ul class="navbar-items">
+      <li><a href="about-mars.html">Mars</a></li>
+      <li><a href="past-missions.html">Past missions</a></li>
+      <li><a href="current-missions copy.html">Current missions</a></li>
+      <li><a href="#">Mangalyaan</a></li>
+      <li><a href="merch.html">Shop</a></li>
+      <li class="icon"><a href="login.html"><i class="fa-solid fa-user" style="color: white;"></i></a></li>
+    </ul>
+  </nav>
+
+  <div class="container" id = "blur">
+    <h1>Ongoing Missions on <span>Mars</span></h1>
+    <div class="carousel-container">
+      <div class="carousel-wrapper" id="carouselWrapper">
+
+        <!--Perseverence mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/Perseverance.png"></div>
+          <div class="content">
+            <h3>Perseverance</h3>
+            <h5>Type: Rover</h5>
+            <h6>Mission name: Mars 2020</h6>
+            <p>Mars 2020 is a Mars rover mission that includes the rover Perseverance, 
+              the small robotic helicopter Ingenuity, and associated delivery systems, 
+              as part of NASA's Mars Exploration Program.
+            </p>
+            <p>Location: Jezero crater</p>
+          </div>
+          <button class="know-more" onclick="toggle_mars_2020()">Know More</button>
+        </div>
+    
+        <!--Curiosity Mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/Curiosity.png" style="height: 180px;"></div>
+          <div class="content">
+            <h3>Curiosity</h3>
+            <h5>Type: Rover</h5>
+            <h6>Mission Name: Mars Science Laboratory</h6>
+            <p>Curiosity is a car-sized Mars rover designed to search for 
+              traces of life on Mars as part of 
+              NASA's Mars Science Laboratory mission.
+            </p>
+            <p>Location: Gale crater</p>
+            <br>
+            <br>
+          </div>
+          <button class="know-more" onclick="toggle_curiosity()">Know More</button>
+        </div>
+    
+        <!--Maven mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/MAVEN.png" style="margin-left: -20px;"></div>
+          <div class="content">
+            <h3>Maven</h3>
+            <h5>Type: Planetary Probe</h5>
+            <h6>Mission Name: Mars atmospheric research</h6>
+            <p>The Mars Atmosphere and Volatile Evolution (MAVEN) mission 
+              was to explore the atmosphere and ionosphere of mars 
+              and how they interact with the Sun and solar wind.
+            </p>
+            <p>Location: Mars orbit (150 km)</p>
+            <br>
+          </div>
+          <button class="know-more" onclick="toggle_maven()">Know More</button>
+        </div>
+    
+        <!--Insight mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/InSight.png" style="margin-left: -20px; height: 130px;"></div>
+          <div class="content">
+            <h3>InSight</h3>
+            <h5>Type: Lander</h5>
+            <h6>Mission Name: Geophysical Monitoring Station</h6>
+            <p>Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission 
+              was designed to study the deep interior of the planet Mars.
+            </p>
+            <p>Location: Elysium Planitia</p>
+          </div>
+          <button class="know-more" onclick="toggle_insight()"">Know More</button>
+        </div>
+    
+        <!--MRO mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/Mars_Reconnaissance_Orbiter.png" style="height: 170px;"></div>
+          <div class="content">
+            <h3>Mars Reconnaissance Orbiter</h3>
+            <h5>Type: Planetary Probe</h5>
+            <h6>Mission Name: MRO</h6>
+            <p>(MRO) is a spacecraft designed to search for the existence of water on Mars, 
+              as part of NASA's Mars Exploration Program.
+            </p>
+            <p>Location: Elysium Planitia</p>
+          </div>
+          <button class="know-more" onclick="toggle_mro()">Know More</button>
+        </div>
+    
+        <!--Tianwen mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/tianwen1.png" style="height: 170px; margin-left: -10px; margin-bottom: 10px;"></div>
+          <div class="content">
+            <h3>Tianwen-1</h3>
+            <h5>Type: Rover</h5>
+            <h6>Mission Name: MRO</h6>
+            <p>It is an interplanetary mission by the China National Space Administration (CNSA).
+              The mission was consisting of 6 spacecraft: 
+              an orbiter, two deployable cameras, lander, remote camera, 
+              and the Zhurong rover.
+            </p>
+            <p>Location: 	Utopia Planitia</p>
+          </div>
+          <button class="know-more">Know More</button>
+        </div>
+    
+        <!--Hope Mission-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/hope.png" style="height: 160px; margin-left: -10px; margin-bottom: 10px;"></div>
+          <div class="content">
+            <h3>HOPE</h3>
+            <h5>Type: Planetary Probe</h5>
+            <h6>Mission Name: Emirates Mars Mission</h6>
+            <p>The space probe will study daily and seasonal weather cycles, 
+              weather events in the lower atmosphere such as dust storms, 
+              and how the weather varies in different regions of the planet.
+            </p>
+            <p>Location: Mars Orbit (20000 km)</p>
+          </div>
+          <button class="know-more">Know More</button>
+        </div>
+    
+        <!--Mars Helicopter-->
+        <div class="card">
+          <div class="img"><img src="../final project/images/mars_helicopeter.png" style="margin-left: 40px;"></div>
+          <div class="content">
+            <h3>Ingenuity</h3>
+            <h5>Type: Helicopter</h5>
+            <h6>Mission Name: 	Extraterrestrial autonomous UAV helicopter</h6>
+            <p>a small robotic helicopter operating on Mars. 
+              It is part of NASA's Mars 2020 mission. It is an experimental mission to prove
+              flight capabilities in another planet.
+            </p>
+            <br>
+          </div>
+          <button class="know-more">Know More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button onclick="prevCard()">&lt;</button>
+      <button onclick="nextCard()">&gt;</button>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Whole Mars Catalouge. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <div class = "popup" id="mars2020">
+    <p>Mars 2020 is a Mars rover mission that includes the rover Perseverance, 
+      the small robotic helicopter Ingenuity, and associated delivery systems, 
+      as part of NASA's Mars Exploration Program. 
+      Mars 2020 was launched from Earth on an Atlas V launch vehicle at 11:50:01 UTC on 30 July 2020,
+      and confirmation of touch down in the Martian crater Jezero was received at 20:55 UTC on 18 February 2021.
+    </p>
+    <br>
+    <p>
+      As of 19 May 2023, Perseverance and Ingenuity have been on Mars for 798 sols (820 total days; 2 years, 90 days).
+      Perseverance is investigating an astrobiologically relevant ancient environment on Mars 
+      for its surface geological processes and history, and assessing its past habitability, 
+      the possibility of past life on Mars, and the potential for preservation of biosignatures 
+      within accessible geological materials.It will cache sample containers along its route for retrieval 
+      by a potential future Mars sample-return mission.
+    </p>
+    <br>
+    <p>
+      The rover will make measurements and technology demonstrations to help designers of a 
+      future human expedition understand any hazards posed by Martian dust, 
+      and will test technology to produce a small amount of pure oxygen (O2) 
+      from Martian atmospheric carbon dioxide (CO2).
+    </p>
+    <br><br>
+
+    <a href = "#" onclick="toggle_mars_2020()"><button class="close-button">Close</button></a>
+  </div>
+
+  <div class = "popup" id="curiosity">
+    <p>
+      Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars 
+      as part of NASA's Mars Science Laboratory (MSL) mission. 
+      Curiosity was launched from Cape Canaveral (CCAFS) on November 26, 2011, at 15:02:00 UTC 
+      and landed on Aeolis Palus inside Gale crater on Mars on August 6, 2012, 05:17:57 UTC.
+    </p>
+    <br>
+    <p>
+      The rover is still operational (way beyond its 2 years target), 
+      and as of 17 May 2023, Curiosity has been active on Mars for 3831 sols (3936 total days; 10 years, 284 days) since its landing.
+    </p>
+    <br>
+    <p>
+      Mission goals include an investigation of the Martian climate and geology, 
+      assessment of whether the selected field site inside Gale has ever offered 
+      environmental conditions favorable for microbial life (including investigation of the role of water), 
+      and planetary habitability studies in preparation for human exploration.
+    </p>
+    <br>
+    <p>
+      The general sample analysis strategy begins with high-resolution cameras to look for features of interest. 
+      If a particular surface is of interest, Curiosity can vaporize a small portion of it 
+      with an infrared laser and examine the resulting spectra signature to query the rock's elemental composition. 
+      If that signature is intriguing, the rover uses its long arm to swing over a microscope and an X-ray spectrometer to take a closer look.
+    </p>
+    <a href = "#" onclick="toggle_curiosity()"><button class="close-button">Close</button></a>
+  </div>
+
+  <div class = "popup" id="maven">
+    <p>
+      MAVEN is a NASA spacecraft orbiting Mars to study the loss of its atmospheric gases to space, 
+      providing insight into the history of the planet's climate and water. 
+      The spacecraft name is an acronym for "Mars Atmosphere and Volatile Evolution". 
+      MAVEN was launched on an Atlas V rocket from Cape Canaveral Air Force Station, Florida, on 18 November 2013 UTC and 
+      went into orbit around Mars on 22 September 2014 UTC. 
+      The mission is the first by NASA to study the Mars atmosphere. The probe is analyzing the planet's upper atmosphere and ionosphere 
+      to examine how and at what rate the solar wind is stripping away volatile compounds.
+    </p>
+    <br>
+    <p>
+      The goal of MAVEN is to determine the history of the loss of atmospheric gases to space, 
+      providing answers about Martian climate evolution. 
+      By measuring the rate with which the atmosphere is currently escaping to space and 
+      gathering enough information about the relevant processes, scientists will be able to 
+      infer how the planet's atmosphere evolved over time.
+    </p>
+    <br><br><br><br><br><br>
+
+    <a href = "#" onclick="toggle_maven()"><button class="close-button">Close</button></a>
+  </div>
+
+  <div class = "popup" id="insight">
+    <p>The Interior Exploration using Seismic Investigations, Geodesy and Heat Transport (InSight) mission 
+      was a robotic lander designed to study the deep interior of the planet Mars. 
+      It was manufactured by Lockheed Martin Space, was managed by NASA's Jet Propulsion Laboratory (JPL). 
+      The mission launched on 5 May 2018 at 11:05:01 UTC aboard an Atlas V-401 launch vehicle 
+      and successfully landed at Elysium Planitia on Mars on 26 November 2018 at 19:52:59 UTC.
+      InSight was active on Mars for 1440 sols (1480 days; 4 years, 19 days).
+    </p>
+    <br>
+    <p>
+      InSight's objectives were to place a seismometer, called Seismic Experiment for Interior Structure (SEIS), 
+      on the surface of Mars to measure seismic activity and provide accurate 3D models of the planet's interior; 
+      and measure internal heat transfer using a heat probe called HP3 to study Mars' early geological evolution. 
+      This was intended to provide a new understanding of how the Solar System's terrestrial planets – 
+      Mercury, Venus, Earth, Mars – and Earth's Moon formed and evolved.
+    </p>
+    <br>
+    <p>
+      Due to excessive dust on its solar panels preventing it from recharging, 
+      NASA put InSight in low-power mode for detecting seismic events in July 2022 and continued monitoring the lander 
+      through the operational period ending in December 2022. 
+      On 20 December 2022, NASA announced that the InSight lander had lost communications with Earth on 15 December 2022, 
+      with the end of the mission being declared on 21 December 2022.
+    </p>
+    <a href = "#" onclick="toggle_insight()"><button class="close-button">Close</button></a>
+  </div>
+
+  <div class = "popup" id="mro">
+    <p>
+      Mars Reconnaissance Orbiter (MRO) is a spacecraft designed to search for the existence of water on Mars, 
+      as part of NASA's Mars Exploration Program. It was launched from Cape Canaveral on August 12, 2005, at 11:43 UTC 
+      and reached Mars on March 10, 2006, at 21:24 UTC. In November 2006, after six months of aerobraking, 
+      it entered its final science orbit and began its primary science phase.
+    </p>
+    <br>
+    <p>
+      Mission objectives include observing the climate of Mars, investigating geologic forces, 
+      providing reconnaissance of future landing sites, and relaying data from surface missions back to Earth. 
+      To support these objectives, the MRO carries different scientific instruments, including three cameras, two spectrometers and a radar. As of January 23, 2023, the MRO has returned over 445 terabits of data, helped choose safe landing sites for NASA's Mars landers and discovered ice and possible flowing salty water on the surface of Mars.
+    </p>
+    <br>
+    <p>
+      The spacecraft continues to operate at Mars, far beyond its intended design life. 
+      Due to its critical role as a high-speed data-relay for ground missions, 
+      NASA intends to continue the mission as long as possible. 
+      As of May 19, 2023, the Mars Reconnaissance Orbiter has been active at Mars for 6111 sols, or 17 years, 2 months and 9 days, and is the third longest-lived spacecraft to orbit Mars, after 2001 Mars Odyssey and Mars Express.
+    </p>
+    <a href = "#" onclick="toggle_mro()"><button class="close-button">Close</button></a>
+  </div>
+
+  <script type="text/javascript">
+    function toggle_mars_2020()
+      {
+        var blur = document.getElementById("blur").classList.toggle('active');
+        var popup = document.getElementById("mars2020").classList.toggle('active');
+      }
+      function toggle_curiosity()
+      {
+        var blur = document.getElementById("blur").classList.toggle('active');
+        var popup = document.getElementById("curiosity").classList.toggle('active');
+      }
+      function toggle_maven()
+      {
+        var blur = document.getElementById("blur").classList.toggle('active');
+        var popup = document.getElementById("maven").classList.toggle('active');
+      }
+      function toggle_insight()
+      {
+        var blur = document.getElementById("blur").classList.toggle('active');
+        var popup = document.getElementById("insight").classList.toggle('active');
+      }
+      function toggle_mro()
+      {
+        var blur = document.getElementById("blur").classList.toggle('active');
+        var popup = document.getElementById("mro").classList.toggle('active');
+      }
+
+
+  const carouselWrapper = document.getElementById("carouselWrapper");
+  const cards = carouselWrapper.getElementsByClassName("card");
+  const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight) + parseInt(getComputedStyle(cards[0]).marginLeft);
+  const totalCards = cards.length;
+  const visibleCards = 3;
+  let currentPosition = 0;
+
+  // Function to move carousel to the left
+  function prevCard() {
+      if (currentPosition > 0) {
+          currentPosition--;
+          carouselWrapper.style.transform = `translateX(-${cardWidth * currentPosition}px)`;
+      }
+  }
+
+  // Function to move carousel to the right
+  function nextCard() {
+      if (currentPosition < totalCards - visibleCards) {
+          currentPosition++;
+          carouselWrapper.style.transform = `translateX(-${cardWidth * currentPosition}px)`;
+      }
+  }
+
+  </script>
+  <script src="https://kit.fontawesome.com/fa21158c25.js" crossorigin="anonymous"></script>
+</body>
+</html>
