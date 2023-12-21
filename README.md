@@ -1,4 +1,3 @@
-# HtmlProjectSem2
-our teams html project for sem 2 cse.
+#Mangalyaan Static Website
 
-This repo is used for improving the code and host the website.
+🚀 Mangalyaan, a beautifully crafted static website, hosted on AWS S3. Explore the universe. Built with HTML, CSS, and JavaScript, deployed on AWS S3 using instructions.
